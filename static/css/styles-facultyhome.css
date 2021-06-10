@@ -1,0 +1,174 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+.nav-custom {
+	margin: 0vh;
+}
+
+@font-face {
+	font-family: "providence-bold";
+	src: url("../fonts/Ogg-Regular.otf");
+}
+
+a.navbar-brand.home-button {
+	color: white;
+	text-decoration: none;
+	font-size: 3.01vh;
+}
+
+a.nav-link {
+	color: white;
+	text-decoration: none;
+	font-size: 2.064vh;
+	text-align: center;
+	margin-left: 3.096vh;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+	outline: none;
+	box-shadow: none;
+}
+
+img.logo-img {
+	margin-left: 3.096vh;
+}
+
+.navbar-nav {
+	margin-right: 1.548vh;
+}
+
+.bg-light {
+	background-color: black !important;
+}
+
+body,
+html {
+	height: 100%;
+	width: 100%;
+	font-family: "providence-bold";
+}
+
+body {
+	background-color: black;
+	background-repeat: no-repeat;
+	height: 100%;
+	width: 100%;
+	background-position: center;
+	user-select: none;
+}
+
+.logoimg {
+	background-image: url("../images/logo_white_noi.png");
+	height: 10vh;
+	width: 10vh;
+	background-size: cover;
+	position: absolute;
+	left: 85%;
+	top: -10%;
+	opacity: 0;
+}
+
+.navcontainer {
+	position: relative;
+}
+
+.user {
+	position: relative;
+}
+
+.main-container {
+	height: 90%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	position: relative;
+}
+
+.heading {
+	font-size: 6vw;
+	color: #f7f7f7;
+	position: absolute;
+	top: 5%;
+}
+
+.maincontainer {
+	width: 100%;
+	height: 100%;
+	color: white;
+	display: flex;
+	margin: auto;
+	justify-content: space-around;
+	align-items: center;
+	background-color: black;
+}
+
+#upperline {
+	height: 3px;
+	width: 70%;
+	background-color: white;
+}
+
+#lowerline {
+	height: 3px;
+	width: 70%;
+	background-color: white;
+}
+
+.containers {
+	width: 23%;
+	height: 23%;
+	font-size: 3.5vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 3px solid white;
+	transition: width 0.3s ease, height 0.3s ease;
+	user-select: none;
+}
+
+.makebigger {
+	width: 46%;
+	height: 46%;
+}
+
+.displayclass {
+	width: 100%;
+	height: 100%;
+	background: black;
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+.makefullscreen {
+	width: 100%;
+	height: 100%;
+}
+
+.nosupport {
+	display: none;
+	opacity: 0;
+}
+
+@media only screen and (max-width: 767px) {
+	body {
+		color: black;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: white;
+	}
+	header,
+	.main-container {
+		display: none;
+	}
+	.nosupport {
+		display: block;
+		opacity: 1;
+	}
+}

@@ -1,0 +1,13 @@
+Faculty,class_room,date,start_slot,end_slot,exam_name,request_status
+3,A101,11-06-2021,1,3,P1,Request
+4,A102,11-06-2021,1,3,P1,Request
+2,A103,11-06-2021,1,3,P1,Request
+3,A101,11-06-2021,5,7,P1,Request
+4,A102,11-06-2021,5,7,P1,Request
+3,A101,12-06-2021,2,4,P1,Request
+4,A102,12-06-2021,2,4,P1,Request
+2,A103,12-06-2021,2,4,P1,Request
+1,A104,12-06-2021,2,4,P1,Request
+3,A101,13-06-2021,3,5,P1,Request
+3,A101,14-06-2021,4,6,P1,Request
+4,A102,14-06-2021,4,6,P1,Request

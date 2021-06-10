@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+	<head>
+                {% load static %}
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>Homepage</title>
+		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&amp;display=swap"
+			rel="stylesheet"
+		/>
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Prata&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="{% static 'css/styles-facultyhome-schedule.css' %}"/>
+	</head>
+
+	<body>
+		<header>
+			<nav class="navbar navbar-expand-sm bg-light .nav-custom static-top">
+				<div class="container-fluid navcontainer">
+					<a class="navbar-brand home-button" href="/index">
+						<img
+							class="logo-img"
+							src="/static/images/logo_white.png"
+							width="50vh"
+							height=""
+							alt="logo-image"
+						/>
+					</a>
+					<button
+						class="navbar-toggler navbar-dark"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarSupportedContent"
+						aria-controls="navbarSupportedContent"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link" href="/fhome">Dashboard</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="/about">About</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="/contact">Contact</a>
+							</li>
+                                                        <li class="nav-item">
+								<a class="nav-link" href="/logout">Logout</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<div class="maincontainer">
+			<div class="heading">Schedule</div>
+			<div style="margin-bottom: 0.5%" class="schedule-row">
+				<div style="font-size: 1.5vw" class="schedule-rowelements">
+					<div class="schedule-row-actual-elements">day</div>
+					<div class="schedule-row-actual-elements">8-9</div>
+					<div class="schedule-row-actual-elements">9-10</div>
+					<div class="schedule-row-actual-elements">10-11</div>
+					<div class="schedule-row-actual-elements">11-12</div>
+					<div class="schedule-row-actual-elements">1-2</div>
+					<div class="schedule-row-actual-elements">2-3</div>
+					<div class="schedule-row-actual-elements">3-4</div>
+					<div class="schedule-row-actual-elements">4-5</div>
+				</div>
+			</div>
+                        {% for i in data %}
+			<div class="schedule-row">
+				<div class="schedule-rowelements">
+					<div class="schedule-row-actual-elements">{{i.date}}</div>
+					<div class="schedule-row-actual-elements">{{i.slot1}}</div>
+					<div class="schedule-row-actual-elements">{{i.slot2}}</div>
+					<div class="schedule-row-actual-elements">{{i.slot3}}</div>
+					<div class="schedule-row-actual-elements">{{i.slot4}}</div>
+					<div class="schedule-row-actual-elements">{{i.slot5}}</div>
+					<div class="schedule-row-actual-elements">{{i.slot6}}</div>
+					<div class="schedule-row-actual-elements">{{i.slot7}}</div>
+					<div class="schedule-row-actual-elements">{{i.slot8}}</div>
+				</div>
+			</div>
+                       {% endfor %}
+		</div>
+		<div class="nosupport">
+			We do not currently offer support for your screen size
+		</div>
+		<script src="{% static 'js/bootstrap.min.js' %}"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="{% static './js/facultyhomeextras-app.js' %}"></script>
+	</body>
+</html>

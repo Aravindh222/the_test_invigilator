@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/styles-index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/buttonflip.scss' %}">
+</head>
+
+<body>
+
+    <div class="index-main-container">
+        <div class="imageright" id="imageright">
+            <div class="actualimage" id="actualimage"></div>
+            <div class="verticalline" id="verticalline"></div>
+        </div>
+
+        <div class="leftcontainer ">
+            <div class="heading">
+                <p id="invigilation" class="invigilation">Invigilation</p>
+                <p id="Management" class="Management">Management</p>
+                <p id="System" class="System">System.</p>
+            </div>
+            <div class="sidebar" id="sidebar">
+                <div class="links" id="links">
+                    <a href="/about">About</a>&emsp;<a href="/contact">Contact</a>&emsp;<br>
+                </div>
+                <div class="main-tiles" id="main-tiles">
+                    <a href='/alogin' class='button button1 adminbutton' id="adminbutton">Admin</a>
+                    <a href='/flogin' class='button button2 facultybutton' id="facultybutton">Faculty</a>
+                </div>
+            </div>
+            <div class="horizontalinetop" id="horizontalinetop"></div>
+            <div class="horizontalinebottom" id="horizontalinebottom"></div>
+        </div>
+    </div>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/index-app.js' %}"></script>
+</body>
+
+</html>

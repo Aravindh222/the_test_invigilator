@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+	<head>
+                {% load static %}
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>Homepage</title>
+		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&amp;display=swap"
+			rel="stylesheet"
+		/>
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Prata&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="{% static 'css/styles-adminhome-allocate.css' %}"/>
+	</head>
+    {% for message in messages %}
+		<script>
+			alert('{{ message }}');
+		</script>
+    {% endfor %}
+	<body>
+		<header>
+			<nav class="navbar navbar-expand-sm bg-light .nav-custom static-top">
+				<div class="container-fluid navcontainer">
+					<a class="navbar-brand home-button" href="/index">
+						<img
+							class="logo-img"
+							src="/static/images/logo_white.png"
+							width="50vh"
+							height=""
+							alt="logo-image"
+						/>
+					</a>
+					<button
+						class="navbar-toggler navbar-dark"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarSupportedContent"
+						aria-controls="navbarSupportedContent"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link" href="/ahome">Dashboard</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="/about">About</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="/contact">Contact</a>
+							</li>
+                                                        <li class="nav-item">
+								<a class="nav-link" href="/logout">Logout</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<div class="maincontainer">
+			<div class="heading">Allocate</div>
+            <div class="row">
+                <div class="overallline"></div>
+            </div>
+            <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="row"> 
+                <div class="tile">
+                    <div class="entry">
+                        Available Rooms
+                    </div>
+                    <div class="entry uploadbutton">
+                        &emsp;<input type="file" id="file1" name="file1">
+                    </div>
+                </div>
+            </div>
+			<div class="row">
+				<div class="tile">
+                    <div class="entry">
+                        Exam Schedule
+                    </div>
+                    <div class="entry uploadbutton">
+                        &emsp;<input type="file" id="file2" name="file2">
+                    </div>
+                </div>
+			</div>
+			<div class="row">
+				<div class="tile">
+                    <div class="entry">
+                        Faculty Information
+                    </div>
+
+                    <div class="entry uploadbutton">
+                        &emsp;<input type="file" id="file3" name="file3">
+                    </div>
+                </div>
+			</div>
+			<div class="row">
+				<div class="tile button-tile">
+                    <div class="entry button-entry">
+                        <button class="button" type="submit">Allocate</button>
+                    </div>
+                </div>
+			</div>
+            </form>
+		<div class="nosupport">
+			We do not currently offer support for your screen size
+		</div>
+		<script src="{% static 'js/bootstrap.min.js' %}"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="{% static './js/facultyhomeextras-app.js' %}"></script>
+	</body>
+</html>
